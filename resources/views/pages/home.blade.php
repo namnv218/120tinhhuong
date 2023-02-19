@@ -3,6 +3,7 @@
 <div class="container"> 
 
     <div class="d-flex gap-5 justify-content-center">
+      Test
       <div class="row">
         @if(Auth::check())
             @if(!empty($user))
@@ -21,7 +22,7 @@
                     </div>
                     <div class="col-sm-2">    
                         <form role="form" action="{{ route('postuserdel', ['id' => $u->id]) }}" method="post">
-                                @csrf
+                            @csrf
                             <button type="submit" class="btn btn-primary"><i class="fa fa-times"></i> Delete</button>
                         </form>   
                     </div>
