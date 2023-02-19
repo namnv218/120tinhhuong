@@ -7,7 +7,7 @@
           <label class="list-group-item d-flex gap-2">
             <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="">
             <span>
-              First checkbox hello
+              First checkbox hello123
               <small class="d-block text-muted">With support text underneath to add more detail</small>
             </span>
           </label>
