@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" ></script>
     
 
     <!-- Fonts -->
@@ -21,24 +21,38 @@
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">   
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">   
+  
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    
+  
     <script type="text/javascript" src="{{ URL::to('js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::to('js/cust.js') }}"></script>   
 
-    <script type="text/javascript" src="{{ URL::to('js/cust.js') }}"></script>
 
     <script type="text/javascript" src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
 </head>
-<body>
+<body onload="stopVideo()" >
+  <script type="text/javascript">
+   
+    $(document).keydown(function(e)  {    
+      var x = 0;
+      if(x==0){
+          if(e.keycode == 32){
+            spacePress();
+          }
+          x = 1;
+      }
+    });
+    
+ </script>
+  
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{ config('app.name', 'Laravel') }}zzzz
+                    {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
